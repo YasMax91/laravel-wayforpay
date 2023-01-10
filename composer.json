@@ -1,0 +1,39 @@
+{
+    "name": "sonix/laravel-wayforpay",
+    "description": "WayForPay payments for Laravel",
+    "type": "library",
+    "require": {
+        "php": "^8.0.2",
+        "guzzlehttp/guzzle": "^7.2",
+        "illuminate/support": "^7.0|^8.0|^9.0",
+        "wayforpay/php-sdk": "^1.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "3.5|^4.0|^5.0|^6.0",
+        "phpunit/phpunit": "^7.0|^8.0|^9.0"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Sonix\\WayForPay\\Facades\\": "src/Facades",
+            "Sonix\\WayForPay\\": "src"
+        }
+    },
+    "authors": [
+        {
+            "name": "YasMax91",
+            "email": "m.yastremskyj@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Sonix\\WayForPay\\WayForPayServiceProvider"
+            ],
+            "aliases": {
+                "WayForPay": "Sonix\\WayForPay\\Facades\\WayForPay"
+            }
+        }
+    }
+}
